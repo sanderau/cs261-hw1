@@ -1,8 +1,8 @@
-/* CS261- HW1 - Program2.c*/
+/* CS261- HW1 - Program1.c*/
 
 /* Name: Austin Sanders
  * Date: 4.5.17
- * Solution description:
+ * Solution description: allocates memory for x an y. checks to make sure allocation is correct. Passes to foo. Foo dereferences and modifies appropriately. Results are printed. Memory is freed.
  */
  
 #include <stdio.h>

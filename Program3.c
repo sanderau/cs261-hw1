@@ -1,7 +1,7 @@
-/* CS261- HW1 - Program4.c*/
-/* Name:
- * Date:
- * Solution description:
+/* CS261- HW1 - Program3.c*/
+/* Name: Austin Sanders
+ * Date: 4.5.2017
+ * Solution description: used bubble sort to sort the array of of integers
  */
  
 #include <stdio.h>
@@ -19,6 +19,7 @@ void sort(int* number, int n){
 		sorted = 0;
 		for(i = 0; i < n-1; i++)
 		{
+			/*bubble sort: if the number to the left is larger than the other then swap the two. Keep doing it till there is no more data to swap*/
 			if(number[i] < number[i+1])
 			{
 				int temp;
@@ -36,10 +37,10 @@ void sort(int* number, int n){
 int main(){
 	srand(time(NULL));
     /*Declare an integer n and assign it a value of 20.*/
-    	int n = 20;
+    	int n = 20;/*size of array*/
     /*Allocate memory for an array of n integers using malloc.*/
     	int *arr = (int *) malloc(n*sizeof(int));
-	assert( arr != NULL);
+	assert( arr != NULL);/*allocates memory to the array and then checks to make sure it is allocated*/
     /*Fill this array with random numbers, using rand().*/
     	int i;
 	for(i = 0; i < n; i++)
@@ -52,7 +53,8 @@ int main(){
 	
 	for(i = 0; i < n; i++)
 	{
-		printf("%d, ", arr[i]);
+		if(i == n-1) printf("%d", arr[i]);
+		else printf("%d, ", arr[i]);
 	}
 
 	printf("\n");
@@ -67,7 +69,8 @@ int main(){
 
 	for(i = 0; i < n; i++)
 	{
-		printf("%d, ", arr[i]);
+		if(i == n-1) printf("%d", arr[i]);
+		else printf("%d, ", arr[i]);
 	}
 
 	printf("\n");

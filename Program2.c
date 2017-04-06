@@ -1,7 +1,7 @@
-/* CS261- HW1 - Program3.c*/
-/* Name:
- * Date:
- * Solution description:
+/* CS261- HW1 - Program2.c*/
+/* Name: Austin Sanders
+ * Date: 4.4.17
+ * Solution description: allocates memory for a student array. Fills in the information randomly. Outputs all information. Calculates min max and average of all the scores.
  */
  
 #include <stdio.h>
@@ -18,10 +18,10 @@ struct student{
 struct student* allocate(){
      /*Allocate memory for ten students*/	
 	struct student *s_arr = (struct student *) malloc(10*sizeof(struct student));     
-	assert(s_arr != NULL);
+	assert(s_arr != NULL);/*allocate memory and check to make sure it is allocated*/
 
      /*return the pointer*/
-	return s_arr;
+	return s_arr;/*return the pointer to the memory*/
 }
 
 void generate(struct student* students){
@@ -31,6 +31,7 @@ void generate(struct student* students){
 
 	int i;
 
+	/*generates random number for score and two random initials*/
 	for(i = 0; i < 10; i++)
 	{
 		char c1,c2;
@@ -95,13 +96,23 @@ int main()
 
 	struct student *students = NULL;
 
+	/*allocates memory for the student */
+
 	students = allocate();
+
+	/*generates random number and two randome letters*/
 
 	generate(students);
 
+	/*outputs this data*/
+
 	output(students);
 
+	/*prints out max min and average test scores*/
+
 	summary(students);
+
+	/*frees the memory*/
 
 	deallocate(students);
 
