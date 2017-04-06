@@ -47,7 +47,7 @@ void sort(struct student* stu, int n)
 				sorted = 1;
 			}		
 
-			if(stu[i].initials[0] == stu[i].initials[0])
+			if(stu[i].initials[0] == stu[i+1].initials[0])
 			{
 				if(stu[i].initials[1] > stu[i+1].initials[1])
 				{
@@ -68,6 +68,7 @@ void sort(struct student* stu, int n)
 					sorted = 1;
 				}		
 			}	
+
 		}
 	}while(sorted == 1);
 }
