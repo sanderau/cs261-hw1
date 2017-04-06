@@ -83,7 +83,8 @@ void sort(struct student* stu, int n)
 }
 
 int main(){
-    /*Declare an integer n and assign it a value.*/
+	srand(time(NULL));
+	/*Declare an integer n and assign it a value.*/
 	
 	int n = 20; /*size of array of students*/
     

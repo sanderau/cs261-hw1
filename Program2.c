@@ -93,7 +93,7 @@ void deallocate(struct student* stud){
 
 int main()
 {
-
+	srand(time(NULL));
 	struct student *students = NULL;
 
 	/*allocates memory for the student */
